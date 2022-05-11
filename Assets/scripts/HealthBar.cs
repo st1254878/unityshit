@@ -10,7 +10,6 @@ public class HealthBar : MonoBehaviour
     void Update()
     {
         slider.value = healthmanager.getCurHealthRate()*100;
-        Debug.Log(healthmanager.getCurHealthRate()*100);
     }
    
     void Start()
