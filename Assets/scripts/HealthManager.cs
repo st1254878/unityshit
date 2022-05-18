@@ -9,11 +9,11 @@ public class HealthManager : MonoBehaviour
     [SerializeField]
     private int maxHealth;
     private int curHealth;
+    private float lerptimer;
     void Start()
     {
         healthsetting();
     }
-
     void healthsetting()
     {
        curHealth = maxHealth;
@@ -21,9 +21,16 @@ public class HealthManager : MonoBehaviour
 
     public void takeDMG(int dmg)
     {
+        lerptimer = 0f;
         curHealth-=dmg;
         if(curHealth<0) curHealth = 0;
     }
+
+    public float getLerpTimer()
+    {
+        return lerptimer;
+    }
+
     public int getMaxHealth()
     {
         return maxHealth;

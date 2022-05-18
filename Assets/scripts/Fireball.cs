@@ -22,7 +22,6 @@ public class Fireball : MonoBehaviour
     public void getenemytransform(GameObject g)
     {
         Transform tenemy = g.transform;
-        Debug.Log(tenemy);
         target = new Vector2(tenemy.position.x,tenemy.position.y);
     }
 
